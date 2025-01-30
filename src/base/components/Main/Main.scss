@@ -1,0 +1,39 @@
+@import "../../Assets/css/_variables.scss";
+body {
+  margin: 0;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+.App {
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.App .wrapper {
+  margin-top: $navbarHeight;
+  display: flex;
+  height: 100%;
+  max-height: calc(100% - 60px);
+  overflow-y: auto;
+
+  .role-error{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.App {
+  .mainSection {
+    width: 100%;
+    padding: 8px;
+    height: 100%;
+    overflow: auto;
+  }
+}

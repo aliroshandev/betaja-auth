@@ -1,0 +1,88 @@
+@import "../../Assets/css/variables";
+
+.root-menu {
+  position: relative;
+  max-width: 236px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.custom-menu-item {
+  &:hover {
+    animation: menuHoverEffect 0.1s ease;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes menuHoverEffect {
+  from {
+    border-right: 1px solid $themeColor0;
+  }
+  to {
+    border-right: 5px solid $themeColor0;
+  }
+}
+
+.custom-menu-item {
+  display: flex !important;
+  align-items: center !important;
+  svg {
+    margin-right: 0px !important;
+  }
+  transition: border 0.05s ease-in;
+}
+
+.custom-submenu-item {
+  div {
+    display: flex !important;
+    align-items: center !important;
+    svg {
+      margin-left: 10px !important;
+    }
+  }
+}
+
+.custom-submenu-in-collapsed {
+  .custom-menu-item {
+    margin: 0px !important;
+    font-size: smaller;
+    font-weight: 400;
+    a {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .ant-menu-submenu-title {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.light-bg {
+  ul {
+    // background: #f0f0f0 !important;
+    background: #d3d9de6b !important;
+  }
+}
+.submenu-collapsed {
+  svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  span {
+    transition: all linear 0.2s;
+    display: none;
+  }
+}
+
+.hover-effect {
+  position: absolute;
+  left: 0px;
+  height: 40px;
+  background: rgb(0, 17, 255);
+  width: 2px;
+}
+
+.ant-menu-submenu-popup {
+  width: 180px;
+}

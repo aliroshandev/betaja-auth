@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "betaja_auth",
+  "name": "Betaja Authorization System",
   "icons": [
     {
       "src": "favicon.ico",

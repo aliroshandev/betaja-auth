@@ -1,0 +1,17 @@
+@import "../../Assets/css/_common.scss";
+
+.main-container {
+  position: relative;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f8f8;
+  overflow: auto;
+}
+
+.ui.basic.segment {
+  background-color: #f8f8f8 !important;
+  border: none !important;
+  border-top: 1px solid #e8e8ec !important;
+  padding-left: 1.5rem;
+}

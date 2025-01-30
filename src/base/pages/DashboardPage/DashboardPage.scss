@@ -1,0 +1,41 @@
+@import "../../Assets/css/variables";
+#dashboard {
+  padding: 40px 70px;
+  height: 100%;
+  display: flex;
+  .dashboard-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 900;
+  }
+
+  canvas {
+    cursor: pointer !important;
+  }
+
+  .menu-items {
+    width: 200px;
+    height: 60px;
+    background: #edededad;
+    border: 1px solid $loginGreen0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+    transition: all 0.2s linear;
+    color: $loginGreen0;
+    font-weight: 400;
+  }
+  .menu-items:hover {
+    transform: scale(1.1);
+    margin-inline: 20px;
+    color: white;
+    border: 4px double white;
+    border-radius: 8px;
+    background-color: $loginGreen0;
+    font-weight: bold;
+    text-shadow: 0px 0px 7px #ffffff;
+  }
+}

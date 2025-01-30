@@ -1,0 +1,30 @@
+.num-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  margin: auto;
+  > div {
+    z-index: 1;
+  }
+  .plus-btn {
+    margin-left: -4px;
+  }
+  .minus-btn {
+    margin-right: -4px;
+  }
+
+  button {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .ant-input-number-handler-wrap {
+    display: none;
+  }
+  .ant-input-number-input-wrap {
+    input {
+      text-align: center;
+    }
+  }
+}
