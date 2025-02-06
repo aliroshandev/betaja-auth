@@ -33,7 +33,7 @@ const LoginPage = () => {
         dispatch(ACT_SetUserInfo(response.data));
       });
 
-      return history.push("/dashboard");
+      return history.push("dashboard");
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [status]);

@@ -52,7 +52,7 @@ const LoginPage = () => {
     } catch (err) {
       console.log(err);
     } finally {
-      await history.push("/dashboard");
+      await history.push("dashboard");
       window.location = `${process.env.REACT_APP_LOGIN}/dashboard`;
     }
   };
@@ -66,7 +66,7 @@ const LoginPage = () => {
   useEffect(() => {
 
     if (isLoggedIn) {
-      history.push('/dashboard');
+      history.push('dashboard');
     }
 
   }, [isLoggedIn,])

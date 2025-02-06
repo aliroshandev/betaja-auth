@@ -86,7 +86,7 @@ const Manager = () => {
         <div style={{width: "70%", flexDirection: "column", justifyContent: "flex-start"}}>
           <div style={{display: "flex", flexDirection: "row", justifyContent: "space-between", margin: "20px"}}>
             <h3>وقایع اخیر</h3>
-            {/*<Button onClick={() => history.push("/events")}>*/}
+            {/*<Button onClick={() => history.push("events")}>*/}
             {/*   مشاهده بیشتر*/}
             {/*</Button>*/}
           </div>

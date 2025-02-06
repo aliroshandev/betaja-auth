@@ -19,7 +19,7 @@ const Resources = (props) => {
   const history = useHistory();
   const { clientId } = props?.location?.state || 0;
   if (!clientId) {
-    history.push("/menu");
+    history.push("menu");
   }
 
   const { id: menuId } = useParams();
@@ -190,7 +190,7 @@ const Resources = (props) => {
             <AutoComplete
               onSelect={(value, item) => {
                 history.push({
-                  pathname: `/resources/${item.key}`,
+                  pathname: `resources/${item.key}`,
                   state: {
                     clientId: selectedClientId,
                   },

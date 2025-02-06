@@ -42,7 +42,7 @@ export const useErrorHandler = () => {
           break;
 
         case 500:
-          history.push("/logout");
+          history.push("logout");
           message = "پاسخی از سمت سرور دریافت نشد";
           break;
 

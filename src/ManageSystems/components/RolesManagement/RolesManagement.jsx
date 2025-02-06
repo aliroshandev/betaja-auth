@@ -160,7 +160,7 @@ const RolesManagement = (props) => {
             <AutoComplete
               onSelect={(value, item) => {
                 setSelectedClientId(item.key);
-                history.push(`/roles-management/${item.key}`);
+                history.push(`roles-management/${item.key}`);
               }}
               filterOption={(inputValue, option) =>
                 option.children.includes(inputValue)

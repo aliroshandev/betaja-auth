@@ -57,7 +57,7 @@ function Main() {
       console.log(err);
     } finally {
       setIsSettingToken(false);
-      await history.push("/dashboard");
+      await history.push("dashboard");
     }
   };
 
@@ -69,7 +69,7 @@ function Main() {
       saveTokenHandler();
     } else if (!token) {
       setIsSettingToken(false);
-      history.push("/login");
+      history.push("login");
     } else {
       setIsSettingToken(false);
     }
