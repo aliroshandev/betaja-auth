@@ -38,22 +38,8 @@ function Main() {
     setIsMenuCollapsed(!isMenuCollapsed);
   };
 
-  const saveTokenHandler = (token) => {
+  useEffect(() => {
     try {
-      // let param = await new Proxy(
-      //   new URLSearchParams(window.location?.search),
-      //   {
-      //     get: (searchParam, props) => searchParam.get(String(props)),
-      //   }
-      // );
-      // setToken(param?.token);
-      // setRefreshToken(param?.refreshToken);
-
-      // dispatch(ACT_SetUserInfo({userName: decodedToken?.preferred_username}));
-      // dispatch(ACT_SetAccessToken(param.token));
-      // dispatch(ACT_SetRefreshToken(param.refreshToken));
-
-      // const urlParams = new URLSearchParams(window.location.search);
       if (token) {
         queueMicrotask(() => {
           setToken(token);
@@ -69,21 +55,31 @@ function Main() {
         history.push("dashboard");
       }, 1000);
     }
-  };
+  }, [token, dispatch, setIsSettingToken, history, setToken, decodedToken?.preferred_username]);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has("token")) {
-      saveTokenHandler(urlParams.get("token") ?? '');
-      // setToken(urlParams.get("token") ?? '');
-      // dispatch(ACT_SetAccessToken(urlParams.get('token')));
-    } else if (!token) {
-      setIsSettingToken(false);
-      history.push("login");
-    } else {
-      setIsSettingToken(false);
+    try {
+      if (urlParams.has("token")) {
+        queueMicrotask(() => {
+          setToken(urlParams.get("token") ?? '');
+          dispatch(ACT_SetAccessToken(token));
+        });
+        // setToken(urlParams.get("token") ?? '');
+        // dispatch(ACT_SetAccessToken(urlParams.get('token')));
+      } else if (!token) {
+        setIsSettingToken(false);
+        history.push("login");
+      }
+    } catch (error) {
+
+    } finally {
+      setTimeout(() => {
+        setIsSettingToken(false);
+        history.push("dashboard");
+      }, 1000);
     }
-  }, [token, history, setRefreshToken, setToken, saveTokenHandler]);
+  }, [token, history, setRefreshToken, setToken, dispatch]);
 
   useEffect(() => {
     document.addEventListener(
