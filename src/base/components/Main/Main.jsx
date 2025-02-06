@@ -6,7 +6,7 @@ import TopMenu from "base/components/TopMenu/TopMenu";
 import {store} from "base/Redux/configureStore";
 import "./Main.scss";
 import {useDispatch} from "react-redux";
-import {ACT_SetAccessToken, ACT_SetRefreshToken, ACT_SetUserInfo,} from "base/Redux/action-creators";
+import {ACT_SetAccessToken, ACT_SetUserInfo,} from "base/Redux/action-creators";
 import RightMenu from "../RightMenu/RightMenu";
 import useSessionStorageState from "../../hooks/useSessionStorage";
 import {useHistory} from "react-router";
@@ -38,8 +38,7 @@ function Main() {
     setIsMenuCollapsed(!isMenuCollapsed);
   };
 
-  let saveTokenHandler;
-  saveTokenHandler = async (data) => {
+  const saveTokenHandler = (token) => {
     try {
       // let param = await new Proxy(
       //   new URLSearchParams(window.location?.search),
@@ -54,31 +53,28 @@ function Main() {
       // dispatch(ACT_SetAccessToken(param.token));
       // dispatch(ACT_SetRefreshToken(param.refreshToken));
 
-      const urlParams = new URLSearchParams(window.location.search);
-
-      if (urlParams.has("token")) {
+      // const urlParams = new URLSearchParams(window.location.search);
+      if (token) {
         queueMicrotask(() => {
-          setToken(urlParams.get("token") ?? '');
-          dispatch(ACT_SetAccessToken(urlParams.get('token')));
+          setToken(token);
+          dispatch(ACT_SetUserInfo({userName: decodedToken?.preferred_username}));
+          dispatch(ACT_SetAccessToken(token));
         });
       }
     } catch (err) {
       console.log(err);
     } finally {
       setIsSettingToken(false);
-      await history.push("dashboard");
+      history.push("dashboard");
     }
   };
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
-
     if (urlParams.has("token")) {
-      queueMicrotask(() => {
-        saveTokenHandler();
-        // setToken(urlParams.get("token") ?? '');
-        // dispatch(ACT_SetAccessToken(urlParams.get('token')));
-      });
+      saveTokenHandler(urlParams.get("token") ?? '');
+      // setToken(urlParams.get("token") ?? '');
+      // dispatch(ACT_SetAccessToken(urlParams.get('token')));
     } else if (!token) {
       setIsSettingToken(false);
       history.push("login");
