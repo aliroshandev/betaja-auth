@@ -20,7 +20,8 @@ const ManageSystems = () => {
   useEffect(() => {
     // dispatch(ACT_setBaseUrl("http://192.180.9.217:8085"));
     // dispatch(ACT_setBaseUrl("http://192.168.1.182:8000"));
-    dispatch(ACT_setBaseUrl("http://46.34.180.212:8000"));
+    // dispatch(ACT_setBaseUrl("http://46.34.180.212:8000"));
+    dispatch(ACT_setBaseUrl("https://auth.betaja.ir/auth-api/"));
   }, [dispatch]);
   return <ManageSystemsRoutes />;
 };
