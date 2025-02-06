@@ -116,7 +116,7 @@ export function useHttpRequest() {
       const originalRequest = error.config;
       if (error.response.status === 401 && !originalRequest._retry) {
         originalRequest._retry = true;
-        await refreshTokenHandler();
+        // await refreshTokenHandler();
         axiosInstance.defaults.headers.common.Authorization = `Bearer ${
           store.getState().user.accessToken
         }`;

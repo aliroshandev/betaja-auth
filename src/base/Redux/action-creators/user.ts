@@ -8,7 +8,7 @@ import {
   SetSelectedApp,
   UserApp,
   SetSelectedAppMenuItems,
-} from "../../Redux/actions";
+} from "../actions";
 import { MenuItemsType } from "base/components/RightMenu/types/MenuItemsTypes";
 
 export const ACT_SetAccessToken = (payload: any): SetAccessToken => ({

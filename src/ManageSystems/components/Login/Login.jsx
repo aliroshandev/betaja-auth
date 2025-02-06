@@ -4,7 +4,7 @@ import {SubmitBtn} from "../Buttons/Buttons";
 import {Form, notification} from "antd";
 import {asyncHttpRequest} from "../../../base/services/asyncHttpRequest";
 import {useHistory} from "react-router-dom";
-import {ACT_SetAccessToken, ACT_SetRefreshToken} from "../../../base/Redux/action-creators";
+import {ACT_SetAccessToken} from "../../../base/Redux/action-creators";
 import {useDispatch} from "react-redux";
 import useSessionStorageState from "../../../base/hooks/useSessionStorage";
 
@@ -40,15 +40,15 @@ const LoginPage = () => {
   const [, setIsUpdating] = useState(false);
   const dispatch = useDispatch();
   const [, setToken] = useSessionStorageState("token");
-  const [, setRefreshToken] = useSessionStorageState("refreshToken");
+  // const [, setRefreshToken] = useSessionStorageState("refreshToken");
 
   const saveTokenHandler = async (data) => {
     try {
       setToken(data.access_token);
-      setRefreshToken(data.refresh_token);
+      // setRefreshToken(data.refresh_token);
 
       dispatch(ACT_SetAccessToken(data.access_token));
-      dispatch(ACT_SetRefreshToken(data.refresh_token));
+      // dispatch(ACT_SetRefreshToken(data.refresh_token));
     } catch (err) {
       console.log(err);
     } finally {

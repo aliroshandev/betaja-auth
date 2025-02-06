@@ -20,7 +20,7 @@ function Main() {
   const history = useHistory();
   const [isSettingToken, setIsSettingToken] = useState(true);
   const [token, setToken] = useSessionStorageState("token");
-  const [, setRefreshToken] = useSessionStorageState("refreshToken");
+  // const [, setRefreshToken] = useSessionStorageState("refreshToken");
 
   const [decodedToken, setDecodedToken] = useState();
   useEffect(() => {
@@ -79,7 +79,7 @@ function Main() {
         history.push("dashboard");
       }, 1000);
     }
-  }, [token, history, setRefreshToken, setToken, dispatch]);
+  }, [token, history, setToken, dispatch]);
 
   useEffect(() => {
     document.addEventListener(
