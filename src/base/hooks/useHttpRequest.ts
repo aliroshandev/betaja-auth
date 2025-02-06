@@ -114,14 +114,14 @@ export function useHttpRequest() {
     },
     async (error) => {
       const originalRequest = error.config;
-      if (error.response.status === 401 && !originalRequest._retry) {
-        originalRequest._retry = true;
+      // if (error.response.status === 401 && !originalRequest._retry) {
+      //   originalRequest._retry = true;
         // await refreshTokenHandler();
-        axiosInstance.defaults.headers.common.Authorization = `Bearer ${
-          store.getState().user.accessToken
-        }`;
-        return axiosInstance(originalRequest);
-      }
+      //   axiosInstance.defaults.headers.common.Authorization = `Bearer ${
+      //     store.getState().user.accessToken
+      //   }`;
+      //   return axiosInstance(originalRequest);
+      // }
       return Promise.reject(error);
     }
   );
