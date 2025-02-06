@@ -17,7 +17,7 @@ root.render(
   <ConfigProvider locale={locale} direction={"rtl"}>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <BrowserRouter>
+        <BrowserRouter basename="/roles">
           <App/>
         </BrowserRouter>
       </PersistGate>
