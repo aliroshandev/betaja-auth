@@ -1,0 +1,4407 @@
+{
+	"info": {
+		"_postman_id": "bc7a852e-70f1-4649-894f-ea008791b5b5",
+		"name": "Authorization",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Realm",
+			"item": [
+				{
+					"name": "getSetting",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/realm/setting",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"realm",
+								"setting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getEventRealm",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/realm/event",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"realm",
+								"event"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLastEventUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/realm/last-event-user",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"realm",
+								"last-event-user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"65c48e3f-306e-4c12-acf2-1be39fe83334\",\r\n    \"name\":\"6کیس\",\r\n    \"description\": \"ستواندوم\",\r\n    \"equipmentGroupId\":\"d0f30182-b74c-4b97-9a69-2d46e41597f8\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/menus/c606734b-0946-4b25-809f-583f75986d81",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"menus",
+								"c606734b-0946-4b25-809f-583f75986d81"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateSetting",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"accessTokenLifespan\": 1800,\r\n  \"waitIncrementSecond\": 160,\r\n  \"maxFailedLoginAttempts\": 5,\r\n  \"userLockDuration\": 300,\r\n  \"passwordHistoryCount\": 3,\r\n  \"passwordChangeInterval\": 304,\r\n  \"minPasswordLength\": 9,\r\n  \"minUpperCaseLetters\": 3,\r\n  \"minLowerCaseLetters\": 3,\r\n  \"minSpecialCharacters\": 1,\r\n  \"minDigitsCharacters\": 3,\r\n  \"notUsername\": true,\r\n  \"notEmail\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/realm/update-setting",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"realm",
+								"update-setting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/menus/id/3fa85f64-5717-4562-b3fc-2c963f66afa6",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"menus",
+								"id",
+								"3fa85f64-5717-4562-b3fc-2c963f66afa6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByClientId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/menus/clieny-id?clientId=\"f88bb7b2-2e2c-4226-8211-0b7f150a228c\"",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"menus",
+								"clieny-id"
+							],
+							"query": [
+								{
+									"key": "clientId",
+									"value": "\"f88bb7b2-2e2c-4226-8211-0b7f150a228c\""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Menu",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/menus?pageSize=10&currentPage=1",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"menus"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "currentPage",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"65c48e3f-306e-4c12-acf2-1be39fe83334\",\r\n    \"name\":\"6کیس\",\r\n    \"description\": \"ستواندوم\",\r\n    \"equipmentGroupId\":\"d0f30182-b74c-4b97-9a69-2d46e41597f8\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/menus/c606734b-0946-4b25-809f-583f75986d81",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"menus",
+								"c606734b-0946-4b25-809f-583f75986d81"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"امنیت مدیریت\",\r\n  \"key\": \"autho-security-management\",\r\n  \"clientId\": \"576fcaa7-2dc0-4bd6-a131-66cfbfb69aac\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/menus/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"menus",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/menus/id/3fa85f64-5717-4562-b3fc-2c963f66afa6",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"menus",
+								"id",
+								"3fa85f64-5717-4562-b3fc-2c963f66afa6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByClientId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/menus/client-id/576fcaa7-2dc0-4bd6-a131-66cfbfb69aac",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"menus",
+								"client-id",
+								"576fcaa7-2dc0-4bd6-a131-66cfbfb69aac"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CommonPassword",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/common-password?pageSize=10&currentPage=1",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"common-password"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "currentPage",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "readFile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/common-password/read-file?filePath=D:%5CServices%5CKeyclock%5Ckeycloak-18.0.2%5Cstandalone%5Cdata%5Cpassword-blacklists%5C10-million-password.txt",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"common-password",
+								"read-file"
+							],
+							"query": [
+								{
+									"key": "filePath",
+									"value": "D:%5CServices%5CKeyclock%5Ckeycloak-18.0.2%5Cstandalone%5Cdata%5Cpassword-blacklists%5C10-million-password.txt"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"65c48e3f-306e-4c12-acf2-1be39fe83334\",\r\n    \"name\":\"6کیس\",\r\n    \"description\": \"ستواندوم\",\r\n    \"equipmentGroupId\":\"d0f30182-b74c-4b97-9a69-2d46e41597f8\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/common-password/c606734b-0946-4b25-809f-583f75986d81",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"common-password",
+								"c606734b-0946-4b25-809f-583f75986d81"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"مدیریت \",\r\n    \"path\": \"http://localhost:8080/api/test\",\r\n    \"parentId\": null,\r\n    \"clientId\": \"a92a551c-80e1-4c68-8b00-594cd9eaf81e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/common-password/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"common-password",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/common-password/id/3fa85f64-5717-4562-b3fc-2c963f66afa6",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"common-password",
+								"id",
+								"3fa85f64-5717-4562-b3fc-2c963f66afa6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Access",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/access?pageSize=10&currentPage=1",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"access"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "currentPage",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/access/65c48e3f-306e-4c12-acf2-1be39fe83334",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"access",
+								"65c48e3f-306e-4c12-acf2-1be39fe83334"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"resourceTypePermissionId\": \"9efeefa3-f039-4afb-9ef8-c0dd850e5652\",\r\n  \"resourceId\": \"5d7e1516-d8f7-4ac5-afe0-b4e8c14dc10a\",\r\n  \"roles\": [\r\n    {\r\n      \"id\": \"fbd1f667-628f-4b18-a856-c173cb6c168e\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/access/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"access",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/access/id/65c48e3f-306e-4c12-acf2-1be39fe83334",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"access",
+								"id",
+								"65c48e3f-306e-4c12-acf2-1be39fe83334"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"65c48e3f-306e-4c12-acf2-1be39fe83334\",\r\n    \"name\":\"6کیس\",\r\n    \"description\": \"ستواندوم\",\r\n    \"equipmentGroupId\":\"d0f30182-b74c-4b97-9a69-2d46e41597f8\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/access/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"access",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"resourceTypePermissionUuidList\": [\n      \"9efeefa3-f039-4afb-9ef8-c0dd850e5652\",\n      \"692c6e1a-1977-4823-90d9-4f9b82c18024\",\n      \"1cce81f6-2bff-4151-9d00-3f615db362ac\",\n      \"bf1c8094-daa8-4092-bbab-c4d287efe664\"\n\n    ],\n    \"resourceId\": \"a09c8319-3575-425d-ac19-72aa16cb50f2\",\n    \"roleId\": \"b8ca9ea4-e514-44e1-b93e-5b53748fbd64\"\n\n  },\n  {\n    \"resourceTypePermissionUuidList\": [\n      \"37ea0ed7-9ec3-479f-a459-264c6e8fac01\",\n      \"682b808e-9a76-4cee-b1f8-7e9e462e53a1\",\n      \"692c6e1a-1977-4823-90d9-4f9b82c18024\",\n      \"1cce81f6-2bff-4151-9d00-3f615db362ac\",\n      \"bf1c8094-daa8-4092-bbab-c4d287efe664\"\n\n    ],\n    \"resourceId\": \"dae98e32-5ab8-4269-a9d5-ffaacea75a1f\",\n    \"roleId\": \"fb5905d3-0dd5-475b-8469-9f3f48dbdb5a\"\n\n  }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/access/save-all",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"access",
+								"save-all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Resource",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/resources?pageSize=10&currentPage=1",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resources"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "currentPage",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByMenuId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/resources/menu-id/6c9e24ec-0139-487c-9c83-66394cf31c33",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resources",
+								"menu-id",
+								"6c9e24ec-0139-487c-9c83-66394cf31c33"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/resources/65c48e3f-306e-4c12-acf2-1be39fe83334",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resources",
+								"65c48e3f-306e-4c12-acf2-1be39fe83334"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"نقش ها\",\r\n  \"key\": \"autho-role\",\r\n  \"url\": \"api/roles\",\r\n  \"menuId\": \"6c9e24ec-0139-487c-9c83-66394cf31c33\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/resources/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resources",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"10ff7fa8-6bdb-415f-8e30-b71792b020c8\",\r\n    \"title\": \"رویدادهای سیستم\",\r\n    \"key\": \"autho-event\",\r\n    \"url\": \"api/realm\",\r\n    \"menuId\": \"e0003a50-4b7b-4814-a0da-3034a687562e\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/resources/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resources",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/resources/id/18582364-eca9-44ce-b019-a53b72acc137",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resources",
+								"id",
+								"18582364-eca9-44ce-b019-a53b72acc137"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByClientId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/resources/client-id/576fcaa7-2dc0-4bd6-a131-66cfbfb69aac",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resources",
+								"client-id",
+								"576fcaa7-2dc0-4bd6-a131-66cfbfb69aac"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Permission",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/permissions?pageSize=10&currentPage=1",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"permissions"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "currentPage",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/permissions/65c48e3f-306e-4c12-acf2-1be39fe83334",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"permissions",
+								"65c48e3f-306e-4c12-acf2-1be39fe83334"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"حذف\",\r\n    \"key\": \"autho-per-delete\",\r\n    \"httpRequestMethod\": \"delete\",\r\n    \"url\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/permissions",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"permissions"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"65c48e3f-306e-4c12-acf2-1be39fe83334\",\r\n    \"title\":\"تست 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/permissions/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"permissions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/permissions/id/65c48e3f-306e-4c12-acf2-1be39fe83334",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"permissions",
+								"id",
+								"65c48e3f-306e-4c12-acf2-1be39fe83334"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ResourceType",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/resource-types?pageSize=10&currentPage=1",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-types"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "currentPage",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/resource-types/65c48e3f-306e-4c12-acf2-1be39fe83334",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-types",
+								"65c48e3f-306e-4c12-acf2-1be39fe83334"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"جراهی\",\r\n    \"description\": \"جراهی\",\r\n    \"sectionGroupId\":\"8a5b9a9c-c423-4531-8718-07d65c0b04ca\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/resource-types/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-types",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"65c48e3f-306e-4c12-acf2-1be39fe83334\",\r\n    \"name\":\"6کیس\",\r\n    \"description\": \"ستواندوم\",\r\n    \"equipmentGroupId\":\"d0f30182-b74c-4b97-9a69-2d46e41597f8\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/resource-types/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-types",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/resource-types/id/65c48e3f-306e-4c12-acf2-1be39fe83334",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-types",
+								"id",
+								"65c48e3f-306e-4c12-acf2-1be39fe83334"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ResourceTypePermission",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/resource-type-permissions?pageSize=10&currentPage=1",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-type-permissions"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "currentPage",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"65c48e3f-306e-4c12-acf2-1be39fe83334\",\r\n    \"name\":\"6کیس\",\r\n    \"description\": \"ستواندوم\",\r\n    \"equipmentGroupId\":\"d0f30182-b74c-4b97-9a69-2d46e41597f8\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/resource-type-permissions/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-type-permissions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/resource-type-permissions/id/65c48e3f-306e-4c12-acf2-1be39fe83334",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-type-permissions",
+								"id",
+								"65c48e3f-306e-4c12-acf2-1be39fe83334"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"جراهی\",\r\n    \"description\": \"جراهی\",\r\n    \"sectionGroupId\":\"8a5b9a9c-c423-4531-8718-07d65c0b04ca\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/resource-type-permissions/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-type-permissions",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/resource-type-permissions/65c48e3f-306e-4c12-acf2-1be39fe83334",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-type-permissions",
+								"65c48e3f-306e-4c12-acf2-1be39fe83334"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ResourcePermission",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/resource-permission?pageSize=10&currentPage=1",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-permission"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "currentPage",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"65c48e3f-306e-4c12-acf2-1be39fe83334\",\r\n    \"name\":\"6کیس\",\r\n    \"description\": \"ستواندوم\",\r\n    \"equipmentGroupId\":\"d0f30182-b74c-4b97-9a69-2d46e41597f8\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/resource-permission/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-permission",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/resource-permissions/id/65c48e3f-306e-4c12-acf2-1be39fe83334",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-permissions",
+								"id",
+								"65c48e3f-306e-4c12-acf2-1be39fe83334"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"جراهی\",\r\n    \"description\": \"جراهی\",\r\n    \"sectionGroupId\":\"8a5b9a9c-c423-4531-8718-07d65c0b04ca\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/resource-permission/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-permission",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "saveAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"جراهی\",\r\n    \"description\": \"جراهی\",\r\n    \"sectionGroupId\":\"8a5b9a9c-c423-4531-8718-07d65c0b04ca\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/resource-permission/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-permission",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/resource-permission/65c48e3f-306e-4c12-acf2-1be39fe83334",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"resource-permission",
+								"65c48e3f-306e-4c12-acf2-1be39fe83334"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/sections?pageSize=10&currentPage=1",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"sections"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "currentPage",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/roles/65c48e3f-306e-4c12-acf2-1be39fe83334",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"roles",
+								"65c48e3f-306e-4c12-acf2-1be39fe83334"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"65c48e3f-306e-4c12-acf2-1be39fe83334\",\r\n    \"name\":\"6کیس\",\r\n    \"description\": \"ستواندوم\",\r\n    \"equipmentGroupId\":\"d0f30182-b74c-4b97-9a69-2d46e41597f8\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/roles/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"roles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/roles/role-id/3bdafacd-f8ac-4239-b9db-6cfdb1cfb853",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"roles",
+								"role-id",
+								"3bdafacd-f8ac-4239-b9db-6cfdb1cfb853"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"جراهی\",\r\n    \"description\": \"جراهی\",\r\n    \"sectionGroupId\":\"8a5b9a9c-c423-4531-8718-07d65c0b04ca\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/roles/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"roles",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RoleResource",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/role-resources?pageSize=10&currentPage=1",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"role-resources"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "currentPage",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/role-resources/65c48e3f-306e-4c12-acf2-1be39fe83334",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"role-resources",
+								"65c48e3f-306e-4c12-acf2-1be39fe83334"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"65c48e3f-306e-4c12-acf2-1be39fe83334\",\r\n    \"name\":\"6کیس\",\r\n    \"description\": \"ستواندوم\",\r\n    \"equipmentGroupId\":\"d0f30182-b74c-4b97-9a69-2d46e41597f8\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/role-resources/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"role-resources",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/role-resources/id/65c48e3f-306e-4c12-acf2-1be39fe83334",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"role-resources",
+								"id",
+								"65c48e3f-306e-4c12-acf2-1be39fe83334"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"resourceId\": \"1c849dcd-b4a0-45b0-bcf5-e95daef01c22\",\r\n  \"roleId\": \"e4f2e4d0-1295-4fe5-b160-cc17104ce103\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/role-resources/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"role-resources",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByRoleId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "client",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/clients",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/clients/47d00435-eb86-41cb-acc2-9f9a51bb6260",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"clients",
+								"47d00435-eb86-41cb-acc2-9f9a51bb6260"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/roles",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByClientId",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/roles/client-id?clientId=51d3d39f-ab1b-471a-bd1a-1c10611b5dc4&currentPage=1&pageSize=10",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"roles",
+								"client-id"
+							],
+							"query": [
+								{
+									"key": "clientId",
+									"value": "51d3d39f-ab1b-471a-bd1a-1c10611b5dc4"
+								},
+								{
+									"key": "currentPage",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"unit_role\",\n  \"description\": \"دسترسی یگانی\",\n  \"composite\": true,\n  \"clientId\": \"8ed791e7-52fc-4a73-89d7-9dc933697593\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/roles",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"69564321-eb10-4906-9c3a-4738c1064780\",\n  \"name\": \"UNIT_ROLE\",\n  \"clientId\": \"8ed791e7-52fc-4a73-89d7-9dc933697593\",\n  \"roleIdKeycloak\": \"10a6630d-951f-4035-b7c7-e81254a12865\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/roles",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"roles"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "84fa03ee-7099-4398-9eab-fa3b815f72f4",
+									"disabled": true
+								},
+								{
+									"key": "clientId",
+									"value": "8ed791e7-52fc-4a73-89d7-9dc933697593",
+									"disabled": true
+								},
+								{
+									"key": "roleIdKeyClock",
+									"value": "23d6ffab-98a9-45af-b169-bf227340a057",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n            \"id\": \"d7c63e03-3393-48a8-bb3d-792e684e70db\",\n        \"name\": \"UNIT_ROLE12\",\n        \"clientId\": \"8ed791e7-52fc-4a73-89d7-9dc933697593\",\n        \"description\": \"12دسترسی یگانی\",\n        \"composite\": true,\n        \"roleIdKeycloak\": \"53a97059-4762-4ff9-9734-eba910764802\"\n       \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/roles",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/user?currentPage=1&pageSize=10",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"user"
+							],
+							"query": [
+								{
+									"key": "currentPage",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/user/id?id=499476e4-86e5-4081-85cf-b9bbe4498da2",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"id"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "499476e4-86e5-4081-85cf-b9bbe4498da2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"علی\",\r\n    \"lastName\": \"روشن ضمیر\",\r\n    \"username\": \"ali_roshanzamir\",\r\n    \"password\": \"123\",\r\n    \"secondPassword\": 123,\r\n    \"email\": \"ali.roshanzamir@gmail.com\",\r\n    \"userEnabled\": true,\r\n    \"attributes\": {\r\n        \"org\": [\r\n            \"0d04850c-5bf5-47c3-8dfe-67340e934c90\"\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/user",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"طاهر\",\n    \"lastName\": \"جباری\",\n    \"username\": \"070100100\",\n    \"email\": null,\n    \"userEnabled\": true,\n    \"attributes\": {\n        \"mobile\": [\n            \"09359045396\"\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/user/log-out/514f87ff-f73f-4c8c-9fa9-9feccd6119cd",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"log-out",
+								"514f87ff-f73f-4c8c-9fa9-9feccd6119cd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "checked",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"hojat\",\n    \"password\": \"123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/user/checked",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"checked"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getToken",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"hojat\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/user/get-token",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"get-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "revokeToken",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"hojat\",\n    \"password\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/user/get-token",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"get-token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\":\"0e065a46-849c-4edb-aeac-79e5d1710585\",  \n    \"firstName\": \"علی\",\n    \"lastName\": \"روشن ضمیر\",\n    \"username\": \"ali.roshanzamir\",\n    \"password\": 123,\n    \"secondPassword\": 123,\n    \"email\": \"ali.roshanzamir@gmail.com\",\n    \"userEnabled\": true,\n    \"attributes\": {\n        \"org\": [\n            \"0d04850c-5bf5-47c3-8dfe-67340e934c90\"\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/user",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "finaByUsername",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/user/username?username=shabab1",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"username"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "shabab1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/user?id=72aa9d10-ac5e-4239-89d4-47272c7f3409",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "72aa9d10-ac5e-4239-89d4-47272c7f3409"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addRoles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\": \"514f87ff-f73f-4c8c-9fa9-9feccd6119cd\",\n  \"clientId\": \"51d3d39f-ab1b-471a-bd1a-1c10611b5dc4\",\n  \"roles\": [\n    {\n      \"id\": \"2b68a4b6-9271-42d2-9be7-38dd60318e1f\",\n      \"name\": \"admin\"\n    }\n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/user/add-roles",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"add-roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByClientIdAndRoleName",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/user/client-roles?clientId=8ed791e7-52fc-4a73-89d7-9dc933697593&roleName=UNIT_ROLE",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"client-roles"
+							],
+							"query": [
+								{
+									"key": "clientId",
+									"value": "8ed791e7-52fc-4a73-89d7-9dc933697593"
+								},
+								{
+									"key": "roleName",
+									"value": "UNIT_ROLE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findRoleByUserAndClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/user/get-role-by-user-and-client?userId=ebbcddaa-01fa-4dc2-bbba-c7fe187e19fb&clientId=8ed791e7-52fc-4a73-89d7-9dc933697593",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"get-role-by-user-and-client"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "ebbcddaa-01fa-4dc2-bbba-c7fe187e19fb"
+								},
+								{
+									"key": "clientId",
+									"value": "8ed791e7-52fc-4a73-89d7-9dc933697593"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteRoleByUserAndClient",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/user/role-by-user-and-client?userId=ebbcddaa-01fa-4dc2-bbba-c7fe187e19fb&clientId=8ed791e7-52fc-4a73-89d7-9dc933697593&roleName=UNIT_ROLE",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"role-by-user-and-client"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "ebbcddaa-01fa-4dc2-bbba-c7fe187e19fb"
+								},
+								{
+									"key": "clientId",
+									"value": "8ed791e7-52fc-4a73-89d7-9dc933697593"
+								},
+								{
+									"key": "roleName",
+									"value": "UNIT_ROLE"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jasypt",
+			"item": [
+				{
+					"name": "jasyptEncryptor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/jasypt?value=postgres",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"jasypt"
+							],
+							"query": [
+								{
+									"key": "value",
+									"value": "postgres"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrganizationUnit",
+			"item": [
+				{
+					"name": "findAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/organizations?pageSize=1000&currentPage=1",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"organizations"
+							],
+							"query": [
+								{
+									"key": "pageSize",
+									"value": "1000"
+								},
+								{
+									"key": "currentPage",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"فرماندهی نداجا\",\r\n  \"code\": \"40\",\r\n  \"active\": true,\r\n  \"parentId\": \"0d04850c-5bf5-47c3-8dfe-67340e934c90\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/organizations/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"organizations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/api/organizations/id/0136a680-9c32-4a00-bd77-4b624f60908a",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"organizations",
+								"id",
+								"0136a680-9c32-4a00-bd77-4b624f60908a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findRoot",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/api/organizations/root-organization",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"organizations",
+								"root-organization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByCodePath",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/api/organizations/find-all-children-by-code-path/001001",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"organizations",
+								"find-all-children-by-code-path",
+								"001001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByParent",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/api/organizations/find-all-children-by-parent-id/45c4d624-919d-4313-be7c-acd32e669783",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"organizations",
+								"find-all-children-by-parent-id",
+								"45c4d624-919d-4313-be7c-acd32e669783"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByParent Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/api/organizations/find-children-by-parent-id/45c4d624-919d-4313-be7c-acd32e669783",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"organizations",
+								"find-children-by-parent-id",
+								"45c4d624-919d-4313-be7c-acd32e669783"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"da8b234e-8b3c-451e-a62d-bdac714bbadd\",\r\n    \"name\": \"فرماندهی نزاجا\",\r\n    \"code\": \"10\",\r\n    \"active\": true,\r\n    \"codePath\": \"001002\",\r\n    \"parentId\": \"0d04850c-5bf5-47c3-8dfe-67340e934c90\",\r\n    \"parentName\": \"فرماندهی آجا\",\r\n    \"children\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/organizations/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"organizations",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/organizations/e93e113e-0bec-42c8-8310-6d17b1b3af86",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"organizations",
+								"e93e113e-0bec-42c8-8310-6d17b1b3af86"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LogHistory",
+			"item": [
+				{
+					"name": "findbyid",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/log-history/id/3fa85f64-5717-4562-b3fc-2c963f66afa6",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"log-history",
+								"id",
+								"3fa85f64-5717-4562-b3fc-2c963f66afa6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"username\": \"string\",\r\n    \"fullName\": \"string\",\r\n    \"actionName\": \"string\",\r\n    \"actionDate\": \"2024-08-26T09:35:11.366Z\",\r\n    \"actionTime\": \"2024-08-26T09:35:11.366Z\",\r\n    \"description\": \"string\",\r\n    \"organizationUnitId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n    \"organizationUnitName\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/log-history",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"log-history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\r\n        \"actionName\": \"string\",\r\n        \"actionDate\": \"2024-08-18T15:22:53.124Z\",\r\n        \"actionTime\": \"2024-08-18T15:22:53.124Z\",\r\n        \"description\": \"string\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/log-history",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"log-history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByCurrentOrg",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/log-history?currentPage=1&pageSize=10",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"log-history"
+							],
+							"query": [
+								{
+									"key": "currentPage",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findLastTenByUsername",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/log-history/last-search",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"log-history",
+								"last-search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/api/log-history/3fa85f64-5717-4562-b3fc-2c963f66afa6",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"log-history",
+								"3fa85f64-5717-4562-b3fc-2c963f66afa6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SOCS",
+			"item": [
+				{
+					"name": "ping",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "fa",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{server_url}}/api/socs/ping/",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"socs",
+								"ping",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resources",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{server_url}}/api/socs/ping",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"socs",
+								"ping"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"params\": \"ایران\",\r\n    \"resource_key\": [\"116119105116116101114\",  \"11010111911511297112101114\", \"11910198115105116101115\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/socs/report",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"socs",
+								"report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resources",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"value\": \"string\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{server_url}}/api/socs/sources/TELEGRAM",
+							"host": [
+								"{{server_url}}"
+							],
+							"path": [
+								"api",
+								"socs",
+								"sources",
+								"TELEGRAM"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "resources Copy",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n  {\r\n    \"value\": \"string\"\r\n  }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://192.168.12.18:8000/api/sources/TELEGRAM",
+							"protocol": "http",
+							"host": [
+								"192",
+								"168",
+								"12",
+								"18"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"sources",
+								"TELEGRAM"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GetToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"\r",
+							"postman.setEnvironmentVariable(\"access_token\",data.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "authorization-srv",
+							"type": "default"
+						},
+						{
+							"key": "client_secret",
+							"value": "SZ6xqVKq1FEvBO9I9o0KxcB99kSVEO2T",
+							"type": "default"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "default"
+						},
+						{
+							"key": "username",
+							"value": "hojat",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:9080/auth/realms/tavana/protocol/openid-connect/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9080",
+					"path": [
+						"auth",
+						"realms",
+						"tavana",
+						"protocol",
+						"openid-connect",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://192.168.12.18:8000",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"12",
+						"18"
+					],
+					"port": "8000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var data = JSON.parse(responseBody);\r",
+							"\r",
+							"postman.setEnvironmentVariable(\"access_token\",data.data.access_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"hojat\",\r\n    \"password\": \"123\",\r\n    \"client_id\": \"authorization-srv\",\r\n    \"client_secret\": \"SZ6xqVKq1FEvBO9I9o0KxcB99kSVEO2T\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
