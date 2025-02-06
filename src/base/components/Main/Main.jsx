@@ -71,11 +71,14 @@ function Main() {
   };
 
   useEffect(() => {
-    if (
-      window.location.pathname === "/" &&
-      window.location?.search?.length > 10
-    ) {
-      saveTokenHandler();
+    const urlParams = new URLSearchParams(window.location.search);
+
+    if (urlParams.has("token")) {
+      queueMicrotask(() => {
+        saveTokenHandler();
+        // setToken(urlParams.get("token") ?? '');
+        // dispatch(ACT_SetAccessToken(urlParams.get('token')));
+      });
     } else if (!token) {
       setIsSettingToken(false);
       history.push("login");
