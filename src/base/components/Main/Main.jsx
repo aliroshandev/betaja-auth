@@ -41,18 +41,27 @@ function Main() {
   let saveTokenHandler;
   saveTokenHandler = async (data) => {
     try {
-      let param = await new Proxy(
-        new URLSearchParams(window.location?.search),
-        {
-          get: (searchParam, props) => searchParam.get(String(props)),
-        }
-      );
-      setToken(param?.token);
-      setRefreshToken(param?.refreshToken);
+      // let param = await new Proxy(
+      //   new URLSearchParams(window.location?.search),
+      //   {
+      //     get: (searchParam, props) => searchParam.get(String(props)),
+      //   }
+      // );
+      // setToken(param?.token);
+      // setRefreshToken(param?.refreshToken);
 
-      dispatch(ACT_SetUserInfo({userName: decodedToken?.preferred_username}));
-      dispatch(ACT_SetAccessToken(param.token));
-      dispatch(ACT_SetRefreshToken(param.refreshToken));
+      // dispatch(ACT_SetUserInfo({userName: decodedToken?.preferred_username}));
+      // dispatch(ACT_SetAccessToken(param.token));
+      // dispatch(ACT_SetRefreshToken(param.refreshToken));
+
+      const urlParams = new URLSearchParams(window.location.search);
+
+      if (urlParams.has("token")) {
+        queueMicrotask(() => {
+          setToken(urlParams.get("token") ?? '');
+          dispatch(ACT_SetAccessToken(urlParams.get('token')));
+        });
+      }
     } catch (err) {
       console.log(err);
     } finally {
