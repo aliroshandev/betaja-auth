@@ -64,8 +64,10 @@ function Main() {
     } catch (err) {
       console.log(err);
     } finally {
-      setIsSettingToken(false);
-      history.push("dashboard");
+      setTimeout(() => {
+        setIsSettingToken(false);
+        history.push("dashboard");
+      }, 1000);
     }
   };
 
