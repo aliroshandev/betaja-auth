@@ -18,10 +18,10 @@ const CrudResource = ({
   const [parentId,] = useState();
 
   const {response: menu} = useGetApiCall({
-    endpoint: `/api/menus/id/${menuId}`,
+    endpoint: `/menus/id/${menuId}`,
   });
   // const {response: resources, status: resourceStatus} = useGetApiCall({
-  //   endpoint: "/api/resources?currentPage=1&pageSize=20",
+  //   endpoint: "/resources?currentPage=1&pageSize=20",
   // });
 
   const ITEMS = useMemo(
@@ -76,7 +76,7 @@ const CrudResource = ({
     setIsUpdating(true);
     asyncHttpRequest({
       method: isCreate ? "POST" : "PUT",
-      endpoint: "api/resources",
+      endpoint: "resources",
       data: {
         ...(!isCreate && selectedResource),
 

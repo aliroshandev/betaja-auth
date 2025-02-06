@@ -22,11 +22,11 @@ const CUMenu = ({ onBack, clientId, selectedMenu }) => {
   }, [menuForm, selectedMenu]);
 
   const { response: responseClient } = useGetApiCall({
-    endpoint: "/api/clients?currentPage=1&pageSize=1000",
+    endpoint: "/clients?currentPage=1&pageSize=1000",
   });
 
   const { response: menus } = useGetApiCall({
-    endpoint: `/api/menus/client-id/${clientId}`,
+    endpoint: `/menus/client-id/${clientId}`,
     enabled: !!clientId,
   });
 
@@ -80,7 +80,7 @@ const CUMenu = ({ onBack, clientId, selectedMenu }) => {
 
     asyncHttpRequest({
       method: isCreate ? "post" : "PUT",
-      endpoint: "api/menus",
+      endpoint: "menus",
       data: {
         ...(!isCreate && selectedMenu),
         ...temp,

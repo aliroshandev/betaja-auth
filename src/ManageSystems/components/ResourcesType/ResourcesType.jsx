@@ -9,7 +9,7 @@ import CrudResourcesType from "./CrudResourcesType";
 const ResourcesType = () => {
   const [selectedResource, setSelectedResource] = useState();
   const { response, status, refetchApi } = useGetApiCall({
-    endpoint: "/api/resource-types?pageSize=10&currentPage=1",
+    endpoint: "/resource-types?pageSize=10&currentPage=1",
   });
 
   const COLUMNS = [

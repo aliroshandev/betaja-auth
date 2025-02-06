@@ -44,7 +44,7 @@ const RightMenu = ({location, isMenuCollapsed}: RightMenuProps) => {
     onSuccess: undefined,
     pagination: false,
     refetchVariables: undefined,
-    endpoint: "/api/access/access-user-login"
+    endpoint: "/access/access-user-login"
   });
 
   useEffect(() => {

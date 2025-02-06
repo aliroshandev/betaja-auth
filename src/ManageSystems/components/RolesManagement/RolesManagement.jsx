@@ -22,7 +22,7 @@ const RolesManagement = (props) => {
     status: clientsStatus,
     refetchApi: clientsRefetch,
   } = useGetApiCall({
-    endpoint: "/api/clients",
+    endpoint: "/clients",
   });
 
   const {
@@ -30,7 +30,7 @@ const RolesManagement = (props) => {
     status: rolesStatus,
     refetchApi: rolesRefetch,
   } = useGetApiCall({
-    endpoint: `/api/roles/client-id?clientId=${selectedClientId}&currentPage=1&pageSize=100`,
+    endpoint: `/roles/client-id?clientId=${selectedClientId}&currentPage=1&pageSize=100`,
     enabled: !!selectedClientId,
   });
 
@@ -41,7 +41,7 @@ const RolesManagement = (props) => {
       ...data,
       clientId: selectedClientId,
     };
-    asyncHttpRequest({method: "DELETE", endpoint: "api/roles", data: temp})
+    asyncHttpRequest({method: "DELETE", endpoint: "roles", data: temp})
       .then(() => {
         notification.success({
           message: "عملیات حذف با موفقیت انجام شد",

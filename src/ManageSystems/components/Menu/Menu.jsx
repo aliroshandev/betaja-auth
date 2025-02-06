@@ -21,7 +21,7 @@ const ManageSystemMenu = () => {
     status: clientsStatus,
     refetchApi: clientsRefetch,
   } = useGetApiCall({
-    endpoint: "/api/clients",
+    endpoint: "/clients",
   });
 
   const {
@@ -29,12 +29,12 @@ const ManageSystemMenu = () => {
     status,
     refetchApi: responseMenuRefetch,
   } = useGetApiCall({
-    endpoint: `/api/menus/client-id/${selectedClientId}`,
+    endpoint: `/menus/client-id/${selectedClientId}`,
     enabled: !!selectedClientId,
   });
 
   const handleDelete = (value) => {
-    asyncHttpRequest({method: "DELETE", endpoint: `api/menus/${value.id}`})
+    asyncHttpRequest({method: "DELETE", endpoint: `menus/${value.id}`})
       .then(() => {
         notification.success({
           message: "عملیات حذف با موفقیت انجام شد",

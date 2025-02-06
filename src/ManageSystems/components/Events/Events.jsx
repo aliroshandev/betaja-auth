@@ -10,7 +10,7 @@ const Events = () => {
     status: eventsStatus,
     refetchApi: eventsRefetch,
   } = useGetApiCall({
-    endpoint: "/api/realm/event?currentPage=1&pageSize=10",
+    endpoint: "/realm/event?currentPage=1&pageSize=10",
   });
 
   // "eventType": "LOGIN",

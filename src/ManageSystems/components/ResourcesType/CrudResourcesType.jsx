@@ -12,7 +12,7 @@ const CrudResourcesType = ({ onBack, selectedResource, isCreate }) => {
     setIsUpdating(false);
     asyncHttpRequest({
       method: isCreate ? "POST" : "PUT",
-      endpoint: "api/resource-types/",
+      endpoint: "resource-types/",
       data: {
         ...(isCreate ? {} : { id: selectedResource.id }),
         ...data,

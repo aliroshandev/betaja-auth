@@ -79,7 +79,7 @@ const CUPermission = ({onBack, selectedPermission, refetch}) => {
     const temp = menuForm.getFieldsValue();
     await asyncHttpRequest({
       method: isCreate ? "post" : "PUT",
-      endpoint: "api/permissions",
+      endpoint: "permissions",
       data: {
         ...(isCreate ? {} : {id: selectedPermission.id}),
         ...temp,

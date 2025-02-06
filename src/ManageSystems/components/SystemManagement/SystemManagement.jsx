@@ -16,7 +16,7 @@ const SystemManagement = () => {
     status: systemDataStatus,
     refetchApi: systemRefetch,
   } = useGetApiCall({
-    endpoint: "/api/realm/setting"
+    endpoint: "/realm/setting"
   });
 
   useEffect(() => {
@@ -182,7 +182,7 @@ const SystemManagement = () => {
   function onSubmit(data) {
     // mutate({
     //     method: "POST",
-    //     endpoint: "/api/realm/update-setting",
+    //     endpoint: "/realm/update-setting",
     //     data: {
     //         ...data,
     //         "notEmail": isNotEmail,
@@ -193,7 +193,7 @@ const SystemManagement = () => {
     console.log(data);
     asyncHttpRequest({
       method: "POST",
-      endpoint: "api/realm/update-setting",
+      endpoint: "realm/update-setting",
       data: {
         ...data,
         "notEmail": isNotEmail ?? false,

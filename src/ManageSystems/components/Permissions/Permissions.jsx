@@ -13,13 +13,13 @@ const Permissions = () => {
     isFetching,
     refetchApi,
   } = useGetApiCall({
-    endpoint: "/api/permissions?pageSize=10&currentPage=1",
+    endpoint: "/permissions?pageSize=10&currentPage=1",
   });
 
   const handleDelete = (value) => {
     asyncHttpRequest({
       method: "DELETE",
-      endpoint: `api/permissions/${value.id}`,
+      endpoint: `permissions/${value.id}`,
     })
       .then(() => {
         notification.success({

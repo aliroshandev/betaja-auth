@@ -13,7 +13,7 @@ const AssignRoleToUser = ({ onBack, selectedRole }) => {
     status: assignedUsersStatus,
     refetchApi: assignedUsersRefetch,
   } = useGetApiCall({
-    endpoint: `/api/user/get-by-client-and-role?clientId=${selectedRole.clientId}&roleName=${selectedRole.name}`,
+    endpoint: `/user/get-by-client-and-role?clientId=${selectedRole.clientId}&roleName=${selectedRole.name}`,
     enabled: !!(selectedRole.clientId && selectedRole.name),
   });
 
@@ -22,13 +22,13 @@ const AssignRoleToUser = ({ onBack, selectedRole }) => {
     status: usersStatus,
     refetchApi: usersRefetch,
   } = useGetApiCall({
-    endpoint: `/api/user?currentPage=1&pageSize=20`,
+    endpoint: `/user?currentPage=1&pageSize=20`,
   });
 
   function addRoleToUser() {
     asyncHttpRequest({
       method: "POST",
-      endpoint: "api/user/add-roles",
+      endpoint: "user/add-roles",
       data: {
         clientId: selectedRole.clientId,
         userId: selectedUser.id,
@@ -59,7 +59,7 @@ const AssignRoleToUser = ({ onBack, selectedRole }) => {
   function removeUserFromRole() {
     asyncHttpRequest({
       method: "DELETE",
-      endpoint: `api/user/role-by-user-client-role?userId=${selectedUser.id}&clientId=${selectedRole.clientId}&roleName=${selectedRole.name}`,
+      endpoint: `user/role-by-user-client-role?userId=${selectedUser.id}&clientId=${selectedRole.clientId}&roleName=${selectedRole.name}`,
     })
       .then((res) => {
         notification.success({

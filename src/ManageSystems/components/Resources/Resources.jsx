@@ -29,7 +29,7 @@ const Resources = (props) => {
     status: clientsStatus,
     refetchApi: clientsRefetch,
   } = useGetApiCall({
-    endpoint: "/api/clients",
+    endpoint: "/clients",
   });
 
   const {
@@ -37,12 +37,12 @@ const Resources = (props) => {
     status: menusStatus,
     refetchApi: menusRefetch,
   } = useGetApiCall({
-    endpoint: `/api/menus/client-id/${selectedClientId}`,
+    endpoint: `/menus/client-id/${selectedClientId}`,
     enabled: !!selectedClientId,
   });
 
   const { response, isFetching, refetchApi } = useGetApiCall({
-    endpoint: `/api/resources/menu-id/${menuId}`,
+    endpoint: `/resources/menu-id/${menuId}`,
     enabled: !!menuId,
   });
   const [selectedResource, setSelectedResource] = useState("");

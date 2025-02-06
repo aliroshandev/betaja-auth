@@ -16,7 +16,7 @@ const ShowAccess = () => {
     status: clientsStatus,
     refetchApi: clientsRefetch,
   } = useGetApiCall({
-    endpoint: "/api/clients",
+    endpoint: "/clients",
   });
 
   const {
@@ -24,7 +24,7 @@ const ShowAccess = () => {
     status: rolesStatus,
     refetchApi: rolesRefetch,
   } = useGetApiCall({
-    endpoint: `/api/roles/client-id?clientId=${selectedClientId}&pageSize=100&currentPage=1`,
+    endpoint: `/roles/client-id?clientId=${selectedClientId}&pageSize=100&currentPage=1`,
     enabled: !!selectedClientId,
   });
 
@@ -33,7 +33,7 @@ const ShowAccess = () => {
   //   status: accessRoleStatus,
   //   refetchApi: accessRoleRefetch,
   // } = useGetApiCall({
-  //   endpoint: `/api/access-role/role/${selectedRoleId}`,
+  //   endpoint: `/access-role/role/${selectedRoleId}`,
   //   enabled: !!selectedRoleId,
   // });
 

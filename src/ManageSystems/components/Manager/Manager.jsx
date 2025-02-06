@@ -11,7 +11,7 @@ const Manager = () => {
     status: eventsStatus,
     refetchApi: eventsRefetch,
   } = useGetApiCall({
-    endpoint: "/api/realm/last-event-user",
+    endpoint: "/realm/last-event-user",
   });
 
   // "eventType": "LOGIN",

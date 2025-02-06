@@ -15,7 +15,7 @@ function LogoutPage() {
   // }, [keycloak]);
 
   useEffect(() => {
-    // /api/user/log-out/{userid}
+    // /user/log-out/{userid}
     window.location = `${process.env.REACT_APP_LOGIN}/login`;
   }, []);
 

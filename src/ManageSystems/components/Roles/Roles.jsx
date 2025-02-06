@@ -3,7 +3,7 @@ import {useGetApiCall} from "base/hooks/useGetApiCall";
 
 const Roles = () => {
   const {response: roleData, status} = useGetApiCall({
-    endpoint: "/api/roles?pageSize=10&currentPage=1",
+    endpoint: "/roles?pageSize=10&currentPage=1",
   });
 
   const columns = [

@@ -150,7 +150,7 @@ const UserCU = ({selectedRole, onBack}) => {
     console.log(temp)
     asyncHttpRequest({
       method: IS_CREATE ? "POST" : "PUT",
-      endpoint: "api/user",
+      endpoint: "user",
       data: {
         ...(!IS_CREATE && selectedRole),
         ...temp,

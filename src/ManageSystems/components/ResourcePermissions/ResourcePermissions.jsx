@@ -23,7 +23,7 @@ const ResourcePermissions = () => {
     status: clientsStatus,
     refetchApi: clientsRefetch,
   } = useGetApiCall({
-    endpoint: "/api/clients",
+    endpoint: "/clients",
   });
 
   const {
@@ -31,7 +31,7 @@ const ResourcePermissions = () => {
     status: menusStatus,
     refetchApi: menusRefetch,
   } = useGetApiCall({
-    endpoint: `/api/menus/client-id/${selectedClientId}`,
+    endpoint: `/menus/client-id/${selectedClientId}`,
     enabled: !!selectedClientId,
   });
 
@@ -40,7 +40,7 @@ const ResourcePermissions = () => {
     status: resourcesStatus,
     refetchApi: resourcesRefetch,
   } = useGetApiCall({
-    endpoint: `/api/resources/menu-id/${selectedMenuId}`,
+    endpoint: `/resources/menu-id/${selectedMenuId}`,
     enabled: !!selectedMenuId,
   });
 
@@ -49,7 +49,7 @@ const ResourcePermissions = () => {
     // status: accessRolesStatus,
     // refetchApi: accessRolesRefetch,
   } = useGetApiCall({
-    endpoint: `/api/resource-permission/find-by-menu-id/${selectedMenuId}`,
+    endpoint: `/resource-permission/find-by-menu-id/${selectedMenuId}`,
     enabled: !!selectedMenuId,
   });
 
@@ -58,7 +58,7 @@ const ResourcePermissions = () => {
     // status: permissionsStatus,
     // refetchApi: permissionsRefetch,
   } = useGetApiCall({
-    endpoint: "/api/permissions?pageSize=100&currentPage=1",
+    endpoint: "/permissions?pageSize=100&currentPage=1",
   });
 
   useEffect(() => {
@@ -137,7 +137,7 @@ const ResourcePermissions = () => {
     setIsUpdating(true);
     asyncHttpRequest({
       method: "POST",
-      endpoint: `api/resource-permission/save-all?menuId=${selectedMenuId}`,
+      endpoint: `resource-permission/save-all?menuId=${selectedMenuId}`,
       data,
     })
       .then((res) => {

@@ -60,7 +60,7 @@ const LoginPage = () => {
   // const [captcha, setCaptcha] = useState("");
   //
   // useEffect(() => {
-  //     authGet("/api/captcha/get-captcha").then((res) => setCaptcha(res));
+  //     authGet("/captcha/get-captcha").then((res) => setCaptcha(res));
   // }, []);
 
   useEffect(() => {
@@ -82,7 +82,7 @@ const LoginPage = () => {
 
     asyncHttpRequest({
       method: "POST",
-      endpoint: "api/auth/login",
+      endpoint: "auth/login",
       data: {
         ...temp,
         client_id: "authorization-srv",
@@ -217,7 +217,7 @@ async function loginRequest({username, password, captcha}) {
     redirect: "follow",
   };
 
-  return fetch("http://localhost:8000/api/auth/login-send-massage", requestOptions)
+  return fetch("https://auth.betaja.ir/auth-api/auth/login-send-massage", requestOptions)
     // .then((response) => response.text())
     .then((response) => response.text())
     .then((result) => {

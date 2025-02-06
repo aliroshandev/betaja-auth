@@ -23,7 +23,7 @@ const Access = () => {
     status: clientsStatus,
     refetchApi: clientsRefetch,
   } = useGetApiCall({
-    endpoint: "/api/clients",
+    endpoint: "/clients",
   });
 
   const {
@@ -31,7 +31,7 @@ const Access = () => {
     status: menusStatus,
     refetchApi: menusRefetch,
   } = useGetApiCall({
-    endpoint: `/api/menus/client-id/${selectedClientId}`,
+    endpoint: `/menus/client-id/${selectedClientId}`,
     enabled: !!selectedClientId,
   });
 
@@ -40,7 +40,7 @@ const Access = () => {
     status: resourcesStatus,
     refetchApi: resourcesRefetch,
   } = useGetApiCall({
-    endpoint: `/api/resource-permission/find-by-menu-id/${selectedMenuId}`,
+    endpoint: `/resource-permission/find-by-menu-id/${selectedMenuId}`,
     enabled: !!selectedMenuId,
   });
 
@@ -49,7 +49,7 @@ const Access = () => {
     status: rolesStatus,
     refetchApi: rolesRefetch,
   } = useGetApiCall({
-    endpoint: `/api/roles/client-id?clientId=${selectedClientId}&pageSize=100&currentPage=1`,
+    endpoint: `/roles/client-id?clientId=${selectedClientId}&pageSize=100&currentPage=1`,
     enabled: !!selectedClientId,
   });
 
@@ -58,7 +58,7 @@ const Access = () => {
     // status: permissionsStatus,
     // refetchApi: permissionsRefetch,
   } = useGetApiCall({
-    endpoint: "/api/permissions?pageSize=100&currentPage=1",
+    endpoint: "/permissions?pageSize=100&currentPage=1",
   });
 
   const {
@@ -66,7 +66,7 @@ const Access = () => {
     // status: accessRoleStatus,
     // refetchApi: accessRoleRefetch,
   } = useGetApiCall({
-    endpoint: `/api/access/role/${selectedRoleId}`,
+    endpoint: `/access/role/${selectedRoleId}`,
     enabled: !!selectedRoleId,
   });
 
@@ -113,7 +113,7 @@ const Access = () => {
   //   refetchApi: avalablePermissionsRefetch,
   // } =
   // useGetApiCall({
-  //   endpoint: `/api/resource-permission/find-by-menu-id/${selectedMenuId}`,
+  //   endpoint: `/resource-permission/find-by-menu-id/${selectedMenuId}`,
   //   enabled: !!selectedMenuId,
   // });
 
@@ -158,7 +158,7 @@ const Access = () => {
     setIsUpdating(true);
     asyncHttpRequest({
       method: "POST",
-      endpoint: "api/access/save-all",
+      endpoint: "access/save-all",
       data: data[0],
     })
       .then((res) => {

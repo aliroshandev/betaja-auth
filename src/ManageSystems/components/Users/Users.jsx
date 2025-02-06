@@ -13,14 +13,14 @@ const Users = () => {
     status,
     refetchApi,
   } = useGetApiCall({
-    endpoint: "/api/user?pageSize=10&currentPage=1",
+    endpoint: "/user?pageSize=10&currentPage=1",
   });
 
   async function handleDelete(data) {
     setIsDeleting(true);
     asyncHttpRequest({
       method: "DELETE",
-      endpoint: `api/user?id=${data.id}`,
+      endpoint: `user?id=${data.id}`,
     })
       .then(() => {
         notification.success({

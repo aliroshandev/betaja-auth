@@ -13,19 +13,19 @@ const RoleResource = () => {
   const [isUpdating, setIsUpdating] = useState(false);
 
   const { response: clients } = useGetApiCall({
-    endpoint: "/api/clients",
+    endpoint: "/clients",
   });
   const { response: menus } = useGetApiCall({
-    endpoint: `/api/menus/client-id?clientId=${selectedClientId}`,
+    endpoint: `/menus/client-id?clientId=${selectedClientId}`,
     enabled: !!selectedClientId,
   });
   const { response: resources } = useGetApiCall({
-    endpoint: `/api/resources/menu-id?menuId=${selectedMenuId}`,
+    endpoint: `/resources/menu-id?menuId=${selectedMenuId}`,
     enabled: !!selectedMenuId,
   });
 
   const { response: roles } = useGetApiCall({
-    endpoint: "/api/roles",
+    endpoint: "/roles",
   });
 
   const ITEMS = useMemo(
@@ -95,7 +95,7 @@ const RoleResource = () => {
     setIsUpdating(true);
     asyncHttpRequest({
       method: "POST",
-      endpoint: "api/role-resources",
+      endpoint: "role-resources",
       data: {
         resourceId,
         roleId,

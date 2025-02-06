@@ -5,7 +5,7 @@ function userAuthentication(password) {
   return new Promise((resolve, reject) => {
     const request = {
       method: "post",
-      url: `${process.env.REACT_APP_BASE_URL}/api/v1/l4/users/authenticate`,
+      url: `${process.env.REACT_APP_BASE_URL}/v1/l4/users/authenticate`,
       headers: {
         Authorization: `Bearer ${store.getState().user.accessToken}`,
         "Content-Type": "application/json",
