@@ -74,7 +74,7 @@ export function useHttpRequest() {
     error: null,
   });
 
-  const refreshTokenHandler = () => {
+  /*const refreshTokenHandler = () => {
     var myHeaders = new Headers();
     myHeaders.append(
       "Authorization",
@@ -106,7 +106,7 @@ export function useHttpRequest() {
       .then((response) => response.text())
       .then((result) => localStorage.setItem("keycloak", result))
       .catch((error) => console.log("error", error));
-  };
+  };*/
 
   axiosInstance.interceptors.response.use(
     (response) => {
@@ -114,14 +114,27 @@ export function useHttpRequest() {
     },
     async (error) => {
       const originalRequest = error.config;
-      // if (error.response.status === 401 && !originalRequest._retry) {
-      //   originalRequest._retry = true;
+      if (error.response.status === 401 && !originalRequest._retry) {
+        originalRequest._retry = true;
+        try {
+          // const newToken = await onRefresh();
+          // storeToken(newToken?.token);
+          // localToken = newToken.token;
+          // localStorage.setItem("refreshToken", newToken.refreshToken);
+          // api.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+          //update token
+          // return api(originalRequest);
+          // Must log out
+          window.location.href = "/logout";
+        } catch (e) {
+          console.log(e);
+        }
         // await refreshTokenHandler();
-      //   axiosInstance.defaults.headers.common.Authorization = `Bearer ${
-      //     store.getState().user.accessToken
-      //   }`;
-      //   return axiosInstance(originalRequest);
-      // }
+        // axiosInstance.defaults.headers.common.Authorization = `Bearer ${
+        //   store.getState().user.accessToken
+        // }`;
+        // return axiosInstance(originalRequest);
+      }
       return Promise.reject(error);
     }
   );

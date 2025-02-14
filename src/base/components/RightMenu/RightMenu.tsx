@@ -24,7 +24,7 @@ interface ActiveMenuType {
 }
 
 const RightMenu = ({location, isMenuCollapsed}: RightMenuProps) => {
-  const pathname = location.pathname.substr(1);
+  const pathname: any = window.location.pathname.substr(1);
   const {SubMenu}: { SubMenu: any } = Menu;
   //TODO: set store type and use it instead of any
   // const userActiveRole = useSelector((store: any) => store.user.info.roles) || [
@@ -44,7 +44,7 @@ const RightMenu = ({location, isMenuCollapsed}: RightMenuProps) => {
     onSuccess: undefined,
     pagination: false,
     refetchVariables: undefined,
-    endpoint: "/access/access-user-login"
+    endpoint: "access/access-user-login"
   });
 
   useEffect(() => {
@@ -183,4 +183,4 @@ const RightMenu = ({location, isMenuCollapsed}: RightMenuProps) => {
   );
 };
 
-export default withRouter(RightMenu);
+export default RightMenu;

@@ -26,7 +26,6 @@ export function useGetApiCall({
                                 endpoint,
                                 pagination = false,
                                 headers,
-                                refetchVariables,
                                 baseUrl = store.getState().app.baseUrl,
                                 onSuccess = (response: responseType) => {
                                 },
@@ -51,7 +50,7 @@ export function useGetApiCall({
         enabled,
       });
     }
-  }, [endpoint, sendRequest, refetchVariables, pagination, baseUrl, enabled, onSuccess, onError]);
+  }, [endpoint, sendRequest, pagination, baseUrl, enabled, onSuccess, onError]);
 
   return {response, status, refetchApi, isFetching, error};
 }

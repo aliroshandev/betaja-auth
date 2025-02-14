@@ -133,6 +133,7 @@ function ErrorFallback({error}) {
 
 const ProtectedRoute = ({redirectPath = "/login", children}) => {
   const [token,] = useSessionStorageState("token");
+  return <>{children}</>;
   if (!token) {
     console.log(token, "token")
     return <Login/>;
