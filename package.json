@@ -2,7 +2,7 @@
   "name": "betaja-authorization",
   "version": "0.1.0",
   "private": true,
-  "homepage": "/roles/",
+  "homepage": "/roles",
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
     "@reduxjs/toolkit": "^2.5.1",
